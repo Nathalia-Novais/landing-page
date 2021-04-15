@@ -260,7 +260,7 @@ align-items: center;
      font-family: 'Open Sans', sans-serif;
      font-size: 18px;
     }
-   
+
 
 
    @media (max-width:420px){
@@ -273,7 +273,6 @@ align-items: center;
     }
 
     .nav_header{
-        display: none;
         background-color: black;
         flex-direction: column;
         justify-content: space-evenly;

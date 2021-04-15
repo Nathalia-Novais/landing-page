@@ -12,12 +12,12 @@
     <header>
         <div class="container container_header">
         <nav id="link" class="nav_header">
-            <a href="#container_banner">inicio</a>
-            <a href="#container_sobre">sobre</a>
-            <a href="#info">desafios</a>
-            <a href="#enderecos">endereços</a>
+            <a href="#container_banner"  onclick= "linksdomenu()">inicio</a>
+            <a href="#container_sobre" onclick= "linksdomenu()" >sobre</a>
+            <a href="#info"  onclick= "linksdomenu()">desafios</a>
+            <a href="#enderecos"  onclick= "linksdomenu()">endereços</a>
         </nav>
-        <a class="botao_menu" href="#" onclick= "linksdomenu()">
+        <a class="botao_menu" href="javascript:void(0)" onclick= "linksdomenu()">
             <i class="fas fa-bars"></i>
         </a>
     </div>
@@ -93,14 +93,29 @@
 
 
     <script>
+         var menu = document.getElementById("link");
         function linksdomenu() {
-            var menu = document.getElementById("link");
-            if (menu.style.display === "flex") 
-            menu.style.display = "none";
+          if (screen.width <= 420) {
+          if (menu.style.display === "flex") 
+             menu.style.display = "none";
             else  {
 
                 menu.style.display = "flex";
             }
+
+                }
+            
+        }
+       
+        window.onresize = () => {
+            if(screen.width > 420) {
+                menu.style.display = "flex";
+            } else {
+                menu.style.display = "none";
+            }
+        
+            
+
         }
         
     </script>
